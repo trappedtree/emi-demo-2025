@@ -3,15 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Document</title>
   <style>
-    html, body {
-    margin: 0;
-    padding: 0;
-}
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+
     header {
-      background-color: #666;
+      background-color: #505a53;
       padding: 30px;
       text-align: center;
       font-size: 35px;
@@ -19,34 +22,68 @@
     }
 
     body {
-      background-color: #666;
+      background-image: url("/Images/Gradient\ black.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
     }
 
-    section {
-      background-color: #dfc2c2;
+    .column {
+      float: left;
+      width: 50%;
+      height: 640px;
+      /* Should be removed. Only for demonstration */
     }
-    
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    footer {
+      float: right;
+      padding: 40px;
+      text-align: center;
+      font-size: 35px;
+      width: 100%;
+      background-color: #505a53
+    }
   </style>
 </head>
 
 <body>
 
-<div>  
-  <header>The Test Page</header>
+  <div>
+    <header>The Test Page</header>
 
-  <section>
+    <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <text style="color: rgb(0, 0, 0); font-size: 12px;">
+          <h1>This is an aside</h1>
+          <p>Asides are used for content that is tangentially related to the content around the aside element, and which
+            could be considered separate from that content. Asides are often presented as sidebars or call-out boxes.
+          </p>
+        </text>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <text style="color: rgb(0, 0, 0); font-size: 24px;">
+          <h1>Hello</h1>
+          <h1>This is a test page</h1>
+          alt="A picture from the game fable of the protag reaching out his hand towards a crown">
+          <a href="example.html">Example page from W3S</a>
+        </text>
+      </div>
+    </div>
 
-    <text style="color: rgb(235, 235, 235); font-size: 24px;">
+    <footer>
+      <text style="color: #f1f1f1;" <p>Yep</p>
 
-      <h1>Hello</h1>
-      <h1>This is a test page</h1>
-      alt="A picture from the game fable of the protag reaching out his hand towards a crown">
-      <a href="example.html">Example page from W3S</a>
+    </footer>
 
-    </text>
-
-  </section>
-</div>
+    </section>
+  </div>
 
 </body>
 
